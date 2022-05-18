@@ -57,5 +57,6 @@ Remove image
 
 ```bash
 docker rm loftr_demo_run
+docker image rm loftr_demo
 ```
 
