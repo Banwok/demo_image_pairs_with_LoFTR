@@ -42,12 +42,10 @@ def test_image_matching():
     fig = make_matching_figure(img0_raw, img1_raw, mkpts0, mkpts1, color, text=text)
     assert len(mkpts0) == len(mkpts1)
     expect0 = np.loadtxt('expect0.txt', dtype=float)
-    expect1 = np.loadtxt('expect1.txt', dtype=float)
     for i in range(len(mkpts0)):
         assert tuple(mkpts0[i]) == tuple(expect0[i])
-        assert tuple(mkpts1[i]) == tuple(expect1[i])
     print("Success!")
-    fig.savefig("demo.png")
+    fig.savefig("output/demo.png")
 
 
 
